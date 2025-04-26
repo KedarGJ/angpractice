@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductDetailsComponent implements OnInit  {
 Id!:string;
 prodObj!:Iprod;
+mainImage!: string; 
 
 constructor(
   private _prodService:ProductsService,private _http:HttpClient,private _route:ActivatedRoute
@@ -57,6 +58,11 @@ constructor(
 
   decreaseQty() {
     if (this.quantity > 1) this.quantity--;
+  }
+
+ 
+  onThumbClick(img: string) {
+    this.mainImage = img;
   }
 
 }

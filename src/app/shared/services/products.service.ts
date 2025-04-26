@@ -14,7 +14,7 @@ export class ProductsService {
   ) { }
 
   getallProducts():Observable<Array<Iprod>>{
-    return this._http.get<any>(`${this.baseUrl}`).pipe(
+    return this._http.get<any>(`${this.baseUrl}/filter?category=Mobiles`).pipe(
       map(data=>Object.keys(data).map(key=>({...data[key],id:key}))),
       // tap(arr => console.log('service fetched products ▶', arr))
     )

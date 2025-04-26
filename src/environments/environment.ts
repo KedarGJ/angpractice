@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl:'http://localhost:3000/products/filter?category=Mobiles'
+  baseUrl:'http://localhost:3000/products'
 };
 
 /*

@@ -21,7 +21,7 @@ export class ProductListComponent implements OnInit
  }
 
  gotoDetails(product:any){
-  this._router.navigate(['/product',product.id])
+  this._router.navigate(['/product',product._id])
  }
 
 }

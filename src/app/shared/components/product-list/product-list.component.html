@@ -1,18 +1,24 @@
 <div class="container mt-4 ">
+  <h3 class="text-center font-weight-bold">Pick Your favourite One</h3>
     <div class="row" >
       <div class="custoom-col mb-4" *ngFor="let product of prodArr">
-        <div class="card border-0" (click)="gotoDetails(product)">
+        <div class="card " (click)="gotoDetails(product)">
           <img [src]="product.images" class="card-img-top img-fluid" alt="Product image">
   
           <div class="card-body text-center p-2">
-            <p class="text-muted small mb-1">{{ product.category }}</p>
-            <h6 class="text-primary font-weight-bold mb-2" style="cursor: pointer;">
-              {{ product.title }}
-            </h6>
-            <h5 class="font-weight-bold">{{ product.total_price }}</h5>
+            <!-- <p class="text-muted small mb-1">{{ product.category }}</p> -->
+             <div class="card-header">
+              <h4 class="text-primary font-weight-bold mb-2" style="cursor: pointer;">
+                {{ product.title }}
+              </h4>
+            </div>
+          
+            <div class="card-footer">
+              <h5 class="font-weight-bold">{{ product.total_price }}</h5>
+            </div>
+           
           </div>
         </div>
       </div>
     </div>
   </div>
-  
