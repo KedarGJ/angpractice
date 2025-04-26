@@ -1,0 +1,8 @@
+.custom-card {
+    height: 350px; /* You can adjust this value as needed */
+    overflow: hidden;
+  }
+  .custom-card .card-img-top{
+    height: 180px;
+     object-fit: cover;
+}

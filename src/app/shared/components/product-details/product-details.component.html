@@ -1,0 +1,70 @@
+<div class="container mt-4" *ngIf="prodObj">
+    <div class="row">
+      <!-- LEFT: Product Images -->
+       <div class="col-md-6">
+        <img [src]="prodObj.images[0]" class="img-fluid mb-3 border" alt="Main image">
+        <div class="d-flex">
+          <img *ngFor="let img of prodObj.images"
+               [src]="img"
+               class="img-thumbnail mr-2"
+               style="width: 70px; height: 70px; object-fit: cover; cursor: pointer;"
+               (click)="prodObj.images[0] = img">
+        </div>
+      </div>
+    </div>
+  </div> 
+      
+
+   <!-- <p>{{prodObj.category}}</p> -->
+  
+      <!-- RIGHT: Product Info -->
+      <!-- <div class="col-md-6">
+        <h5 class="text-muted">Categories: {{ prodObj.category }}</h5>
+        <h3>{{ prodObj.title }}</h3>
+        <p>
+          <span class="text-danger h4 mr-2">${{ prodObj.discountPrice }}</span>
+          <del class="text-muted">${{ prodObj.originalPrice }}</del>
+        </p>
+  
+        <ul class="list-unstyled">
+          <li><strong>Brand:</strong> {{ prodObj.brand }}</li>
+          <li><strong>Capacity:</strong> {{ prodObj.capacity }}</li>
+          <li><strong>Material:</strong> {{ prodObj.material }}</li>
+          <li><strong>Wattage:</strong> {{ prodObj.wattage }}</li>
+        </ul>
+  
+        <h5 class="mt-4">About this item:</h5>
+        <ul>
+          <li *ngFor="let point of prodObj.descriptionPoints">{{ point }}</li>
+        </ul>
+  
+        <div class="mt-4 p-3 border rounded">
+          <h5>${{ prodObj.discountPrice }}</h5>
+          <p class="text-muted small mb-1">🚚 Free shipping</p>
+          <p><strong>Shipping to:</strong> <select class="form-control w-auto d-inline ml-2"><option>Metro Manila</option></select></p>
+  
+          <!-- Quantity -->
+          <!-- <div class="d-flex align-items-center mb-2">
+            <label class="mr-2 mb-0">Quantity:</label>
+            <button class="btn btn-sm btn-outline-secondary" (click)="decreaseQty()">−</button>
+            <span class="mx-2">{{ quantity }}</span>
+            <button class="btn btn-sm btn-outline-secondary" (click)="increaseQty()">+</button>
+          </div>
+  
+          <!-- Color -->
+          <!-- <div class="mb-3">
+            <label>Color:</label>
+            <select class="form-control w-auto">
+              <option *ngFor="let color of prodObj.colors">{{ color }}</option>
+            </select>
+          </div>
+  
+          <button class="btn btn-danger btn-block mb-2">Add to cart 🛒</button>
+          <button class="btn btn-dark btn-block">Buy now</button>
+  
+          <small class="text-muted d-block mt-3">Eligible for return/refund within 30 days.</small>
+          <small class="text-muted">Free support included.</small>
+        </div>
+      </div> --> --> -->
+  
+  
